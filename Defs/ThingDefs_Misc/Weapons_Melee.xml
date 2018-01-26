@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>Witchesbroom</defName>
+	<label>witches broom</label>
+	<description> A witches broom. Or is it just a normal broom..? It's hard to tell. </description>
+	<graphicData>
+		<texPath>Things/Item/Equipment/WeaponMelee/broom</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<techLevel>Neolithic</techLevel>
+	<weaponTags>
+		<li>Neolithic</li>
+		<li>NeolithicMelee</li>
+	</weaponTags>
+	<costStuffCount>40</costStuffCount>
+	<statBases>
+		<WorkToMake>500</WorkToMake>
+		<Mass>2</Mass>
+	</statBases>
+	<equippedAngleOffset>-65</equippedAngleOffset>
+	<stuffCategories>
+	   <li>Metallic</li>
+       <li>Woody</li>
+	   <li>Stony</li>
+	</stuffCategories>
+	<recipeMaker>
+		<recipeUsers>
+		   <li>ElectricSmithy</li>
+		   <li>FueledSmithy</li>
+		   <li>CraftingSpot</li>
+		</recipeUsers>
+	</recipeMaker>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.15</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16.2</power>
+        <cooldownTime>2.15</cooldownTime>
+      </li>
+    </tools>
+	<verbs>
+	   <li>
+		  <verbClass>Verb_MeleeAttack</verbClass>
+		  <hasStandardCommand>true</hasStandardCommand>
+		  <meleeDamageDef>Blunt</meleeDamageDef>
+		</li>
+	</verbs>
+  </ThingDef>
+  
+</Defs>

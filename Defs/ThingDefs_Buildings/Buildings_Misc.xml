@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Coffin</defName>
+    <label>coffin</label>
+    <thingClass>Building_Casket</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bed/coffin</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4, 4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites><li>Cryptosleep</li></researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A magic sarcophagus designed to keep a "person" in a state of suspended animation for many years..</description>
+    <size>(1,2)</size>
+    <designationCategory>Misc</designationCategory>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+    <costList>
+      <Steel>180</Steel>
+      <Uranium>5</Uranium>
+      <Component>8</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>0.4</staticSunShadowHeight>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>BurialCoffin</defName>
+    <label>burial coffin</label>
+    <thingClass>Building_Sarcophagus</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/burialcoffin</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <description>An ornate casket meant to store the dead before their burial.. or perhaps to stop them from unburying themselves.. </description>
+    <size>(1,2)</size>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Rare</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<preventDeteriorationInside>true</preventDeteriorationInside>
+      <fullGraveGraphicData>
+				<texPath>Things/Building/Misc/burialcoffinfull</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(3,3)</drawSize>
+			</fullGraveGraphicData>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowCorpsesStranger</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_SarcophagusPlate</nameMaker>
+        <descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+        <mustBeFullGrave>true</mustBeFullGrave>
+      </li>
+    </comps>
+    <costStuffCount>60</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <designationCategory>Misc</designationCategory>
+  </ThingDef>
+  
+</Defs>
